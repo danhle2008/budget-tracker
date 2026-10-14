@@ -2,23 +2,25 @@ import java.util.List;
 import java.util.Scanner;
 
 public class BudgetApp {
+
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+        //Scanner scan = new Scanner(System.in);
+        BudgetCategory budget = new BudgetCategory("Groceries", 500, 250);
+        System.out.println(budget);
 
-        while(scan.hasNextLine()) {
-            String category = scan.nextLine();
+        // while(scan.hasNextLine()) {
+        //     String category = scan.nextLine();
 
-            double limit = scan.nextDouble();
-            double spent = scan.nextDouble();
+        //     double limit = scan.nextDouble();
+        //     double spent = scan.nextDouble();
 
-            // Consume \n after spent input 
-            if(scan.hasNextLine()) scan.nextLine();
+        //     // Consume \n after spent input 
+        //     if(scan.hasNextLine()) scan.nextLine();
 
-            String limitString = String.format("$%.2f", limit);
-            String spentString = String.format("$%.2f", spent);
-            System.out.println("The budget limit for " + category + " was: " + limitString + 
-                               " but the actual spend was " + spentString);
-        }
+        //     String limitString = String.format("$%.2f", limit);
+        //     String spentString = String.format("$%.2f", spent);
+        //     // System.out.println("The budget limit for " + category + " was: " + limitString + " but the actual spend was " + spentString);
+        // }
     }
 
     /**
@@ -33,10 +35,10 @@ public class BudgetApp {
      * @param categories the budget categories with the spend
      * @return the total amount over/under budget
      */
-    public static int budgetDifference(List<BudgetCategory> categories) {
-        // TODO: You will implement this method in Wave 4
-        // Note that this method SHOULD NOT have a print statement.
-        // It should instead return the value.
-        return -1;
-    }
+    // public static int budgetDifference(List<BudgetCategory> categories) {
+    //     // TODO: You will implement this method in Wave 4
+    //     // Note that this method SHOULD NOT have a print statement.
+    //     // It should instead return the value.
+    //     return -1;
+    // }
 }
