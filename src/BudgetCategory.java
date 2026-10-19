@@ -13,6 +13,19 @@ public class BudgetCategory implements Comparable<BudgetCategory>{
         return category + ", limit: " + limit + ", spent: " + spent;
     }
 
+    public String getCategory() {
+        return category;
+    } 
+
+    public int getLimit() {
+        return limit;
+    }
+
+    public int getSpent() {
+        return spent;
+    }
+
+
     @Override 
     public int compareTo(BudgetCategory other) {
         int thisDiff = this.spent - this.limit;
