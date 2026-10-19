@@ -1,12 +1,27 @@
 import java.util.List;
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class BudgetApp {
 
     public static void main(String[] args) {
         //Scanner scan = new Scanner(System.in);
-        BudgetCategory budget = new BudgetCategory("Groceries", 500, 250);
-        System.out.println(budget);
+        BudgetCategory groceries = new BudgetCategory("Groceries", 245, 240);
+        BudgetCategory entertainment = new BudgetCategory("Entertainment", 100, 70);
+        BudgetCategory eatingOut = new BudgetCategory("Eating Out", 100, 200);
+        
+        System.out.println(groceries);
+        System.out.println(entertainment);
+        System.out.println(eatingOut);
+
+        List<BudgetCategory> categories = new ArrayList<>();
+        categories.add(groceries); 
+        categories.add(entertainment); 
+        categories.add(eatingOut);
+        
+        Collections.sort(categories);
+        System.out.println(categories);
 
         // while(scan.hasNextLine()) {
         //     String category = scan.nextLine();
