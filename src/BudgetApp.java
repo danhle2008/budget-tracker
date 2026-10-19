@@ -26,7 +26,11 @@ public class BudgetApp {
         // wave 4
         int diff = budgetDifference(categories);
         System.out.println("total over/under budget: " + diff);
+        System.out.println();
 
+        //wave 5
+        System.out.println("Spending chart: ");
+        printBarChart(categories);
 
         // while(scan.hasNextLine()) {
         //     String category = scan.nextLine();
@@ -64,5 +68,16 @@ public class BudgetApp {
             total += cat.getSpent() - cat.getLimit();
         }
         return total;
+    }
+
+    //wave 5
+    public static void printBarChart(List<BudgetCategory> categories) {
+        for (BudgetCategory c : categories) {
+            System.out.print(c.getCategory() + ": ");
+            for (int i = 0; i< c.getSpent() / 10; i++) {
+                System.out.print("*"); // 1* = $10 couldn't think of something else for larger money
+            }
+            System.out.println();
+        }
     }
 }
